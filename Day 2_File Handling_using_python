@@ -1,0 +1,54 @@
+The Code for file handling:
+
+file = open('File_Handling_data_File.txt','r')
+with open('File_Handling_data_File.txt','w') as file:
+  file.write("Python is a Human understandable language \n which makes it easy to read and write line by line")
+with open('File_Handling_data_File.txt','a') as file:
+  file.write("\nAppend mode will make changes without overwriting the original content")
+content = file.read()
+print(content)    
+file.close()
+
+****************OPENING A FILE : 
+use open('') function to opena file. Specify the file name & mode (e.g. 'r' for read, 'w' for write,'a' for append)
+file = open('File_Handling_data_File.txt','r')
+
+
+*****************READING FROM A FILE : 
+read the content of the file using methods like read(), readline() or readlines()
+content = file.read()          #read the entire content of the file
+print(content)
+
+line = file.readline()         #read the first line
+print(line)
+
+multiline = file.readlines()   #reads multiple lines of a content in a single line/para
+print(multiline)
+
+
+******************WRITE TO A FILE : 
+open a file in write mode and use methods like 'write() to add the content.write mode will overwrite the existing content.
+
+content = file.read()
+file = open('File_Handling_data_File.txt','w') 
+print(content)
+        or
+content = file.read()
+with open('File_Handling_data_File.txt','w') as file:
+    file.write("Python is a Human understandable language \n which makes it easy to read and write line by line")
+print(content)
+
+
+*****************APPENDING TO A FILE : Open the file in append mode without overwriting the exisiting content
+content = file.read()
+file = open('File_Handling_data_File.txt','a')
+print(content)
+        or
+content = file.read()
+with open('File_Handling_data_File.txt','a') as file:
+    #file.write("\nAppend mode will make changes without overwriting the original content")
+print(content)
+
+
+Note :  Make sure to close the file once the operation on the file are done using
+file.close()
